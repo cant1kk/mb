@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таро</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        /* Ваш CSS здесь */
+    </style>
+</head>
+<body>
+    <div id="main-menu">
+        <button onclick="Telegram.WebApp.MainButton.setText('Расклады').show(); Telegram.WebApp.sendData('расклады')">Расклады</button>
+        <button onclick="Telegram.WebApp.MainButton.setText('Консультация').show(); Telegram.WebApp.sendData('консультация')">Консультация</button>
+    </div>
+
+    <div id="categories" style="display: none;">
+        <!-- Здесь будет таблица с категориями раскладов -->
+    </div>
+
+    <div id="layouts" style="display: none;">
+        <!-- Здесь будет список раскладов с кратким описанием -->
+    </div>
+
+    <div id="layout-detail" style="display: none;">
+        <!-- Здесь будет подробное описание расклада -->
+        <button onclick="Telegram.WebApp.MainButton.setText('Заказать').show(); Telegram.WebApp.sendData('заказать')">Заказать</button>
+    </div>
+
+    <div id="order-form" style="display: none;">
+        <!-- Здесь будет форма заказа -->
+    </div>
+
+    <div id="consultation" style="display: none;">
+        <!-- Здесь будет информация о консультации -->
+        <button onclick="Telegram.WebApp.MainButton.setText('Заказать').show(); Telegram.WebApp.sendData('заказать')">Заказать</button>
+    </div>
+
+    <script>
+        // Обработка событий и логика приложения
+        Telegram.WebApp.onEvent("mainButtonClicked", function(){
+            // ...
+        });
+
+        // ... (другие обработчики событий)
+    </script>
+</body>
+</html>
